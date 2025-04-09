@@ -1358,18 +1358,18 @@ button.swiper-pagination-bullet {
     display: flex;
     gap: 10px;
     align-items: center; }
-  .button__icon {
+  .buttons__icon {
     transition: transform 0.3s ease; }
-  .button__icon--rotated {
+  .buttons__icon--rotated {
     transform: rotate(180deg); }
-  .button__text {
+  .buttons__text {
     font-size: 16px;
     line-height: 24px;
     color: #1B1C21;
     font-weight: bold;
     padding-left: 10px;
     white-space: nowrap; }
-  .button__text:hover {
+  .buttons__text:hover {
     color: #7E7E82; } }
 
 @media (min-width: 1120px) {
