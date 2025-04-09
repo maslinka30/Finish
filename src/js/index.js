@@ -198,6 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tablet: document.querySelector('.content__text.desktop'),
     desktop: document.querySelector('.content__texts.desktop')
   };
+  const link = readMoreButton.querySelector('.content__item-press');
   let isExpanded = false;
   readMoreButton.addEventListener('click', function(e) {
     e.preventDefault();
@@ -209,8 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
           el.style.overflow = 'visible';
         }
       });
-      
-      updateButton(true);
+      link.textContent = 'Свернуть';
     } else {
       if (window.matchMedia('(min-width: 1125px)').matches) {
         textElements.mobile.style.display = 'none';
@@ -227,23 +227,10 @@ document.addEventListener('DOMContentLoaded', function() {
         textElements.tablet.style.display = 'none';
         textElements.desktop.style.display = 'none';
       }
-      
-      updateButton(false);
+      link.textContent = 'Читать далее';
     }
-    
     isExpanded = !isExpanded;
   });
-  function updateButton(expanded) {
-    const link = readMoreButton.querySelector('.content__item-press');
-    if (expanded) {
-      link.textContent = 'Свернуть';
-      link.style.setProperty('--icon-url', 'url(/img/general/collapse.svg)');
-    } else {
-      link.textContent = 'Читать далее';
-      link.style.setProperty('--icon-url', 'url(/img/general/expand.svg)');
-    }
-  }
-
   window.addEventListener('resize', function() {
     if (!isExpanded) {
       if (window.matchMedia('(min-width: 1125px)').matches) {
