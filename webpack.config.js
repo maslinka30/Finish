@@ -87,6 +87,10 @@ module.exports = {
         from: './src/img',
         to: 'img',
       },
+      {
+        from: './src/fonts',
+        to: 'fonts',
+      },
     ])
   ],
 };
