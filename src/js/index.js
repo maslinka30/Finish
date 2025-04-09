@@ -79,10 +79,10 @@ window.addEventListener('resize', checkCatalogItems);
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.catalogs__button').addEventListener('click', function() {
     const list = document.querySelector('.catalogs__list');
-    const icon = document.querySelector('.button__icon');
+    const icon = document.querySelector('.buttons__icon');
     list.classList.toggle('catalogs__list--expanded');
-    icon.classList.toggle('button__icon--rotated');
-    const buttonText = document.querySelector('.button__text');
+    icon.classList.toggle('buttons__icon--rotated');
+    const buttonText = document.querySelector('.buttons__text');
     buttonText.textContent = list.classList.contains('catalogs__list--expanded') 
       ? 'Скрыть' 
       : 'Показать все';

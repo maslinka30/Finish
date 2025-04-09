@@ -137,15 +137,15 @@
       align-items: center;
     }
     
-    .button__icon {
+    .buttons__icon {
       transition: transform 0.3s ease;
     }
     
-    .button__icon--rotated {
+    .buttons__icon--rotated {
       transform: rotate(180deg);
     }
     
-    .button__text {
+    .buttons__text {
       font-size: 16px;
       line-height: 24px;
       color: $black;
@@ -154,7 +154,7 @@
       white-space: nowrap;
     }
     
-    .button__text:hover {
+    .buttons__text:hover {
       color: $graphite;
     }
   }
